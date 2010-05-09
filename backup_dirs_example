@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# copy this file to backup_dirs.`hostname -s`
+# edit this file to suit your needs
+
+BACKUP_DIRS="/etc /bin /sbin /root /newkernel /boot \
+            /var/lib/dpkg /var/cache/apt/srcpkgcache.bin\
+            /var/cache/apt/pkgcache.bin /var/cache/debconf \
+            /usr/bin /usr/sbin /usr/lib/iptables /usr/lib/ipset \
+            /var/backups /usr/lib64 /var/lib/mysql \
+            /lib /usr/libexec"
