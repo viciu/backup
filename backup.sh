@@ -13,7 +13,11 @@ do
     rsync -av --delete --acls --owner --group --executability -R $i /backup/current
 done
 
-bash /root/utils/backup/mysqldump.sh
+which mysql
+if [ $? -eq 0 ]
+then
+    bash /root/utils/backup/mysqldump.sh
+fi
 
 echo "backup.sh: "$(date) >> /var/log/xutils.log
 
