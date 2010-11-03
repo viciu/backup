@@ -9,6 +9,7 @@ mkdir /backup/archive
 mkdir /backup/current
 mkdir /backup/integrity
 mkdir /backup/integrity/archive
+cp backup.dirs_example backup.dirs_`hostname -s`
 
 #	ln -s /root/utils/backup.sh /etc/cron.daily/backup.sh
 #	ln -s /root/utils/gziper.sh /etc/cron.weekly/gziper.sh
