@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Create your .passwd and .admin files"
-echo ".passwd is needed for mysql backu, .admin fill with your email address"
+echo ".passwd is needed for mysql backup, .admin fill with your email address"
 echo ""
 
 mkdir /backup/mysql
@@ -21,6 +21,7 @@ cat <<EOF
 00 03 * * * /root/utils/backup/backup.sh 1>>/var/log/xutils.log 2>>/var/log/xutils.log
 13 03 * * 7 /root/utils/backup/gziper.sh 1>>/var/log/xutils.log 2>>/var/log/xutils.log
 43 03 * * 7 /root/utils/backup/flusher.sh 1>>/var/log/xutils.log 2>>/var/log/xutils.log
+04 04 * * * /root/utils/backup/remote_backup.sh 1>>/var/log/xutils.log 2>>/var/log/xutils.log
 EOF
 
 
