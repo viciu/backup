@@ -1,3 +1,4 @@
 .passwd
 .admin
 backup_dirs.*
+backup_target.*
