@@ -4,11 +4,11 @@ echo "Create your .passwd and .admin files"
 echo ".passwd is needed for mysql backup, .admin fill with your email address"
 echo ""
 
-mkdir /backup/mysql
-mkdir /backup/archive
-mkdir /backup/current
-mkdir /backup/integrity
-mkdir /backup/integrity/archive
+mkdir -p /backup/mysql
+mkdir -p /backup/pgsql
+mkdir -p /backup/archive
+mkdir -p /backup/current
+mkdir -p /backup/integrity/archive
 cp backup.dirs_example backup.dirs_`hostname -s`
 
 #	ln -s /root/utils/backup.sh /etc/cron.daily/backup.sh

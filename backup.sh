@@ -19,5 +19,11 @@ then
     bash /root/utils/backup/mysqldump.sh
 fi
 
+which pg_dumpall
+if [ $? -eq 0 ]
+then
+    bash /root/utils/backup/pgdumpall.sh
+fi
+
 echo "backup.sh: "$(date) >> /var/log/xutils.log
 
