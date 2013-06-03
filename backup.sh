@@ -13,7 +13,7 @@ do
     rsync -av --delete --acls --owner --group --executability -R $i /backup/current
 done
 
-which mysql
+which mysqldump
 if [ $? -eq 0 ]
 then
     bash /root/utils/backup/mysqldump.sh
